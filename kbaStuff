@@ -1,0 +1,50 @@
+http://jack-mulvey-scott.com/TEST/ootp/StatsLab/StatsLab/widget.php?show=standings&league_id=119&sub_league=0&division=0
+
+{source} <?php include '/home/users/web/b2036/dom.fionadiamondcom/public_html/Jack/TEST/ootp/StatsLab/StatsLab/widget.php?show=standings&league_id=119&sub_league=0&division=0'; ?> {/source}
+
+
+tmbu stadings
+http://themoneyballunion.com/game/StatsLab/widget.php?show=standings&division=1&sub_league=1
+http://themoneyballunion.com/game/StatsLab/widget.php?show=standings&division=2&sub_league=1
+
+/* Division Block */
+.wdgT
+{
+    width:170px;
+    margin-bottom:5px;
+}
+
+/* Column Headers */
+.wdgH td
+{
+    font-size:10px;
+    font-weight:bold;
+    text-align:center;
+    width:23px;
+    border-bottom:1px solid black;
+}
+
+/* Win, Loss and GB columns */
+.wdg1 td,
+.wdg2 td
+{
+     width:23px;
+     font-size:10px;
+     text-align:center;
+}
+
+/* Team Name Column */
+.wdg1 .wdg1_l,
+.wdg2 .wdg2_l
+{
+    font-size:12px;
+    width:101px;
+    text-align:left;
+}
+
+/* Divison Name Headers */
+.wdgH .wdgH_l 
+{
+    width:101px;
+    text-align:left;
+}  
