@@ -99,7 +99,7 @@ aside.stats h3{
 	margin-left: 1em;
 }
 aside.stats div{
-	margin-left: 1em;
+	
 }
 aside.stats a, a:hover, a:visited{
 	text-decoration:none;
@@ -206,3 +206,40 @@ footer a:hover{
     width:101px;
     text-align:left;
 }  
+
+.tab-panels ul {
+    margin: 0;
+    padding: 0;
+}
+.tab-panels ul li {
+    list-style-type: none;
+    display: inline-block;
+    background: #999;
+    margin: 0;
+    padding: 3px 10px;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    font-weight: 200;
+    cursor: pointer;
+
+}
+.tab-panels ul li:hover {
+    color: #fff;
+    background: #666;
+}
+
+.tab-panels ul li.active {
+    color: #fff;
+    background: #666;
+}
+
+.tab-panels .panel {
+    display:none;
+  
+  
+  
+}
+
+.tab-panels .panel.active {
+    display:block;
+}

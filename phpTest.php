@@ -85,26 +85,29 @@
         ?>
       </div>
     </aside>
-    <aside class="stats">
+    <aside class="stats tab-panels">
       <h2>League Leaders</h2>
-
-      <div class="pow">
+      <ul class="tabs">
+        <li rel="panel1">POW</li>
+        <li rel="panel2">WAR</li>
+        <li rel="panel3">Batter</li>
+      </ul>
+      
+      <div id='panel1' class="panel active">
       <h3>SL Player of the Week</h3>
         <?php
           $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?show=potw&league_id=100&sub_league=0', 10);
           $html = utf8_encode($html);
           echo $html;
         ?>
-      </div>
-      <div class="pow">
       <h3>HL Player of the Week</h3>
         <?php
           $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?show=potw&league_id=100&sub_league=1', 10);
           $html = utf8_encode($html);
           echo $html;
-        ?>
+        ?>    
       </div>
-      <div class='hide' id='stat1'>
+      <div id='panel2' class="panel">
       <h3>WAR leaders</h3>
         <?php
           $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=war&topX=10', 10);
@@ -112,49 +115,32 @@
           echo $html;
           
         ?>
-      </div>
-      <div class='hide' id='stat2'>
-      <h3>pWAR leaders</h3>
+        <h3>pWAR leaders</h3>
         <?php
           $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=pwar&topX=10', 10);
           $html = utf8_encode($html);
-          echo $html;                   
+          echo $html;
+          
         ?>
       </div>
-      <div class='hide' id='stat3'>
-      <h3>HR leaders</h3>
+      <div id='panel3' class="panel">
+        <h3>HR leaders</h3>
         <?php
           $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=hr&topX=10', 10);
           $html = utf8_encode($html);
           echo $html;
           
         ?>
-      </div>
-      <div class='hide' id='stat4'>
-      <h3>Hit Leaders</h3>
+        <h3>Hit leaders</h3>
         <?php
           $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=h&topX=10', 10);
-          $html = utf8_encode($html);
-          echo $html;                   
-        ?>
-      </div>
-      <div class='hide' id='stat5'>
-      <h3>Qualtiy Start leaders</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=qs&topX=10', 10);
           $html = utf8_encode($html);
           echo $html;
           
         ?>
+      
       </div>
-      <div class='hide' id='stat6'>
-      <h3>Strikeout Leaders</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=pk&topX=10', 10);
-          $html = utf8_encode($html);
-          echo $html;                   
-        ?>
-      </div>
+      
       
     </aside>
     <div class="news">
@@ -207,14 +193,21 @@
 </body>
 <script>
   $(document).ready(function(){
-    $('.pow').hide(8000);
-    $('#stat1').show(8000).hide(16000);
-    $('#stat2').show(8000).hide(16000);
-    $('#stat3').show(16000).hide(24000);
-    $('#stat4').show(16000).hide(24000);
-    
-    
+       $('.tab-panels .tabs li').on('click', function(){
 
+        //figure out which panel to show
+        var panelToShow = $(this).attr('rel');
+        
+
+        //hide current panel
+        $('.tab-panels .panel.active').hide(300, function(){
+          $(this).removeClass('active');
+          $('#'+ panelToShow).show(300, function(){
+            $(this).addClass('active');
+          });
+        });
+
+       }); 
   });
 </script>
 </html>
