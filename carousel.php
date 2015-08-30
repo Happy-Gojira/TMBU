@@ -2,10 +2,11 @@
 <head>   
   <meta charset="windows-1252"> 
   <title>TMBU</title>
-  <link rel="stylesheet" href="css/stats.css">
+  <link rel="stylesheet" href="css/carasol.css">
   
   <link href='http://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  <script src='jquery/jquery-2.1.4.js'></script>
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  
  
   
 
@@ -87,58 +88,54 @@
     <aside class="stats">
       <h2>League Leaders</h2>
       
-      <div id="slideshow">
-      <div class='panel' >
-      <h3>SL Player of the Week</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?show=potw&league_id=100&sub_league=0', 10);
-          $html = utf8_encode($html);
-          echo $html;
-        ?>
-      <h3>HL Player of the Week</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?show=potw&league_id=100&sub_league=1', 10);
-          $html = utf8_encode($html);
-          echo $html;
-        ?>    
-      </div>
-      <div class='panel'>
-      <h3>WAR leaders</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=war&topX=10', 10);
-          $html = utf8_encode($html);
-          echo $html;
-          
-        ?>
-        <h3>pWAR leaders</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=pwar&topX=10', 10);
-          $html = utf8_encode($html);
-          echo $html;
-          
-        ?>
-      </div>
-      <div class='panel'>
-      
-        <h3>HR leaders</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=hr&topX=10', 10);
-          $html = utf8_encode($html);
-          echo $html;
-          
-        ?>
-        <h3>Hit leaders</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=h&topX=10', 10);
-          $html = utf8_encode($html);
-          echo $html;
-          
-        ?>
-      
-      </div>
-      </div>
-      
-      
+      <div class="single">
+        <div class='panel' >
+          <h3>SL Player of the Week</h3>
+            <?php
+              $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?show=potw&league_id=100&sub_league=0', 10);
+              $html = utf8_encode($html);
+              echo $html;
+            ?>
+          <h3>HL Player of the Week</h3>
+            <?php
+              $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?show=potw&league_id=100&sub_league=1', 10);
+              $html = utf8_encode($html);
+              echo $html;
+            ?>    
+        </div>
+        <div class='panel'>
+          <h3>WAR leaders</h3>
+            <?php
+              $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=war&topX=10', 10);
+              $html = utf8_encode($html);
+              echo $html;
+              
+            ?>
+            <h3>pWAR leaders</h3>
+            <?php
+              $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=pwar&topX=10', 10);
+              $html = utf8_encode($html);
+              echo $html;
+              
+            ?>
+        </div>
+        <div class='panel'>
+          <h3>HR leaders</h3>
+          <?php
+            $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=hr&topX=10', 10);
+            $html = utf8_encode($html);
+            echo $html;
+            
+          ?>
+          <h3>Hit leaders</h3>
+          <?php
+            $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=h&topX=10', 10);
+            $html = utf8_encode($html);
+            echo $html;
+            
+          ?>
+        </div>
+      </div>    
     </aside>
     <div class="news">
       <h2>Breaking News</h2>
@@ -185,23 +182,32 @@
     </footer>
     
   </div>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.single').slick({
+      
+        infinite: true,
+        adaptiveHeight: true,
+        arrows: true,
+        dots: true,
+        autoplay:true,
+        autoplaySpeed: 8000,
+        
+        slidesToShow: 1,
+        slidesToScroll: 1
+        
+        
+      });
+    });
+  </script>
 
 
 </body>
-<script>
-  $(function(){
-    $("#slideshow > div:gt(0)").hide();
 
-    setInterval(function() { 
-      $('#slideshow > div:first')
-      .fadeOut(1000)
-      .next()
-      .fadeIn(1000)
-      .end()
-      .appendTo('#slideshow');
-  },  8000);
-  });
-</script>
 </html>
 
 

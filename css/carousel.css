@@ -105,18 +105,14 @@ aside.stats a, a:hover, a:visited{
 	text-decoration:none;
 	color:#2069D0;
 }
-
-#slideshow { 
-    float: left;
-    position: relative; 
-    width: 100%; 
-    background-color: #F5F5F5;
-    
+aside.stats ul{
+	list-style: none;
+}
+aside.stats ul li{
+	display: inline;
 }
 
-#slideshow > div { 
-    position: absolute; 
-}
+
 div.panel{
 	background-color: #F5F5F5;
 	width: 100%;
