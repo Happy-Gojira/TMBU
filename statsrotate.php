@@ -88,57 +88,53 @@
       <h2>League Leaders</h2>
       
       <div id="slideshow">
-      <div class='panel' >
-      <h3>SL Player of the Week</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?show=potw&league_id=100&sub_league=0', 10);
-          $html = utf8_encode($html);
-          echo $html;
-        ?>
-      <h3>HL Player of the Week</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?show=potw&league_id=100&sub_league=1', 10);
-          $html = utf8_encode($html);
-          echo $html;
-        ?>    
-      </div>
-      <div class='panel'>
-      <h3>WAR leaders</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=war&topX=10', 10);
-          $html = utf8_encode($html);
-          echo $html;
-          
-        ?>
-        <h3>pWAR leaders</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=pwar&topX=10', 10);
-          $html = utf8_encode($html);
-          echo $html;
-          
-        ?>
-      </div>
-      <div class='panel'>
-      
-        <h3>HR leaders</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=hr&topX=10', 10);
-          $html = utf8_encode($html);
-          echo $html;
-          
-        ?>
-        <h3>Hit leaders</h3>
-        <?php
-          $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=h&topX=10', 10);
-          $html = utf8_encode($html);
-          echo $html;
-          
-        ?>
-      
-      </div>
-      </div>
-      
-      
+        <div class='panel' >
+          <h3>SL Player of the Week</h3>
+            <?php
+              $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?show=potw&league_id=100&sub_league=0', 10);
+              $html = utf8_encode($html);
+              echo $html;
+            ?>
+          <h3>HL Player of the Week</h3>
+            <?php
+              $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?show=potw&league_id=100&sub_league=1', 10);
+              $html = utf8_encode($html);
+              echo $html;
+            ?>    
+        </div>
+        <div class='panel'>
+          <h3>WAR leaders</h3>
+            <?php
+              $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=war&topX=10', 10);
+              $html = utf8_encode($html);
+              echo $html;
+              
+            ?>
+            <h3>pWAR leaders</h3>
+            <?php
+              $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=pwar&topX=10', 10);
+              $html = utf8_encode($html);
+              echo $html;
+              
+            ?>
+        </div>
+        <div class='panel'>
+          <h3>HR leaders</h3>
+          <?php
+            $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=hr&topX=10', 10);
+            $html = utf8_encode($html);
+            echo $html;
+            
+          ?>
+          <h3>Hit leaders</h3>
+          <?php
+            $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=h&topX=10', 10);
+            $html = utf8_encode($html);
+            echo $html;
+            
+          ?>
+        </div>
+      </div>    
     </aside>
     <div class="news">
       <h2>Breaking News</h2>

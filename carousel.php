@@ -2,7 +2,8 @@
 <head>   
   <meta charset="windows-1252"> 
   <title>TMBU</title>
-  <link rel="stylesheet" href="css/carasol.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <!--<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/overpass" rel="stylesheet" type="text/css"/> -->
   
   <link href='http://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
@@ -130,6 +131,22 @@
           <h3>Hit leaders</h3>
           <?php
             $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=h&topX=10', 10);
+            $html = utf8_encode($html);
+            echo $html;
+            
+          ?>
+        </div>
+        <div class='panel'>
+          <h3>K leaders</h3>
+          <?php
+            $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=pk&topX=10', 10);
+            $html = utf8_encode($html);
+            echo $html;
+            
+          ?>
+          <h3>QS leaders</h3>
+          <?php
+            $html = getHTML('http://themoneyballunion.com/game/StatsLab//widget.php?stat=qs&topX=10', 10);
             $html = utf8_encode($html);
             echo $html;
             
