@@ -127,7 +127,11 @@ aside.stats li{
 {
 	color:#66cc33;   
 }
-
+/*Stat of the day section*/
+section.SOTD{
+	width: 100%;
+	float: left;
+}
 
 /*Footer*/
 
