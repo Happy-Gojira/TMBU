@@ -16,18 +16,17 @@
 <body>
 <?php 
   function getHTML($url,$timeout)
-  {     $username = 'Jackson Buffalo';
-        $password = 'rochester';
+  {
        $ch = curl_init($url); // initialize curl with given url
        curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER["HTTP_USER_AGENT"]); // set  useragent
        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // write the response to a variable
        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true); // follow redirects if any
-       curl_setopt($ch, CURLOPT_USERPWD, "$username:$password");
        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout); // max. seconds to execute
        curl_setopt($ch, CURLOPT_FAILONERROR, 1); // stop when it encounters an error
        return @curl_exec($ch);
   }
 ?>
+
   <div id="wrap">
     <header>
       <h1>The MoneyBall Union</h1>
@@ -191,48 +190,6 @@
       </div>
       
     </div>
-    <section class="SOTD">
-      <?php 
-        
-        $username = 'Jackson Buffalo';
-        $password = 'rochester';
-        $loginUrl = 'http://themoneyballunion.com/game/StatsLab/login.php';
-         
-        //init curl
-        $ch = curl_init();
-         
-        //Set the URL to work with
-        curl_setopt($ch, CURLOPT_URL, $loginUrl);
-         
-        // ENABLE HTTP POST
-        curl_setopt($ch, CURLOPT_POST, 1);
-         
-        //Set the post parameters
-        curl_setopt($ch, CURLOPT_POSTFIELDS, 'user='.$username.'&pass='.$password);
-         
-        //Handle cookies for the login
-        curl_setopt($ch, CURLOPT_COOKIEJAR, 'cookie.txt');
-         
-        //Setting CURLOPT_RETURNTRANSFER variable to 1 will force cURL
-        //not to print out the results of its query.
-        //Instead, it will return the results as a string return value
-        //from curl_exec() instead of the usual true/false.
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-         
-        //execute the request (the login)
-        $store = curl_exec($ch);
-         
-        //the login is now done and you can continue to get the
-        //protected content.
-         
-        //set the URL to the protected file
-        curl_setopt($ch, CURLOPT_URL, 'http://themoneyballunion.com/game/StatsLab/statOfTheDay.php');
-         
-        //execute the request
-        $content = curl_exec($ch);
-        echo $content;
-       ?>
-    </section>
     
     <footer>
       <ul>
