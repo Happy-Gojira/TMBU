@@ -43,13 +43,13 @@
       <h1>The MoneyBall Union</h1>
       <nav>
         <ul>
-          <li><a href="http://tmbu.invisionzone.com/">Forum</a></li>
-          <li><a href="http://themoneyballunion.com/game/lgfile/tmbu.tar.gz">League File</a></li>
-          <li><a href="http://themoneyballunion.com/game/StatsLab/login.php">StatsLab</a></li>
-          <li><a href="http://themoneyballunion.com/game/lgreports/">Reports</a></li>
-          <li><a href="http://themoneyballunion.com/game/lgreports/history/index.html">History</a></li>
-          <li><a href="http://themoneyballunion.com/game/exporttracker4/">Export Tracker</a></li>
-          <li><a href="http://themoneyballunion.com/game/lgreports/online_league_status.html">Export Status</a></li>
+          <li><a href="http://tmbu.invisionzone.com/" onclick="ga('send', 'event', 'link', 'click-Forum', 'http://tmbu.invisionzone.com/')">Forum</a></li>
+          <li><a href="http://themoneyballunion.com/game/lgfile/tmbu.tar.gz" onclick="ga('send', 'event', 'link', 'click-LeagueFile', 'http://themoneyballunion.com/game/lgfile/tmbu.tar.gz')">League File</a></li>
+          <li><a href="http://themoneyballunion.com/game/StatsLab/login.php" onclick="ga('send', 'event', 'link', 'click-StatsLab', 'http://themoneyballunion.com/game/StatsLab/login.php')">StatsLab</a></li>
+          <li><a href="http://themoneyballunion.com/game/lgreports/" onclick="ga('send', 'event', 'link', 'click-Reports', 'http://themoneyballunion.com/game/lgreports/')">Reports</a></li>
+          <li><a href="http://themoneyballunion.com/game/lgreports/history/index.html" onclick="ga('send', 'event', 'link', 'click-History', 'http://themoneyballunion.com/game/lgreports/history/index.html')">History</a></li>
+          <li><a href="http://themoneyballunion.com/game/exporttracker4/" onclick="ga('send', 'event', 'link', 'click-ExportTracker', 'http://themoneyballunion.com/game/exporttracker4/')">Export Tracker</a></li>
+          <li><a href="http://themoneyballunion.com/game/lgreports/online_league_status.html" onclick="ga('send', 'event', 'link', 'click-ExportStatus', 'http://themoneyballunion.com/game/lgreports/online_league_status.html')">Export Status</a></li>
         </ul>
       </nav>
       <div>
