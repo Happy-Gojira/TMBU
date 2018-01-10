@@ -1,0 +1,220 @@
+body{
+	/*font-family: 'PT Serif', serif;*/
+	font-family: 'Playfair Display', serif;
+	font-size: 100%;
+}
+
+header h1{
+	margin-left: 5%;
+	color: #2069D0;
+}
+header img{
+	width: 85%;
+	float: left;
+	margin-left: 5%;
+}
+
+nav{
+	float:left;
+	width: 85%;
+	clear:both;
+	margin:0% 0% 2% 5%;
+	font-size: 125%;
+	list-style:none;
+}
+nav ul{
+	width: 100%;
+	list-style:none;
+}
+nav li{
+	font-size: 100%;
+	float:left;
+	width:12%;
+	padding:.3em 0 .3em 0;
+	text-align:center;
+}
+
+nav a{
+	display:block;
+	text-decoration:none;
+	color:#2069D0;
+}
+nav a:hover{
+	color:#66cc33;
+}
+.menu{
+	display:none;
+}
+
+
+div.news{
+	float: left;
+	width: 60%;
+	margin-left: .5em;
+	background-color: #F5F5F5;
+}
+div.news a{
+	text-decoration:none;
+	color:#2069D0;
+}
+div.news h2{
+	margin-left: 5%;
+}
+div.articles{
+	margin-left: 10%;
+}
+
+/*Aside right*/
+aside.standings{
+	float: left;
+	margin-left: .5em;
+	width: 15%;
+	background-color: #F5F5F5;
+}
+aside.standings h2{
+	margin-left: 1em;
+}
+aside.standings h3{
+	font-size: 90%;
+	margin-left: 1em;
+}
+aside.standings div{
+	margin-left: 1em;
+}
+aside.standings a, a:hover, a:visited{
+	text-decoration:none;
+	color:#2069D0;
+}
+aside.stats{
+	float: left;
+	margin-left: .5em;
+	width: 15%;
+	background-color: #F5F5F5;
+}
+aside.stats h2{
+	margin-left: 1em;
+}
+aside.stats h3{
+	font-size: 90%;
+	margin-left: 1em;
+}
+aside.stats div{
+	
+}
+aside.stats a, a:hover, a:visited{
+	text-decoration:none;
+	color:#2069D0;
+}
+
+#slideshow { 
+    float: left;
+    position: relative; 
+    width: 100%; 
+    background-color: #F5F5F5;
+    
+}
+
+#slideshow > div { 
+    position: absolute; 
+}
+div.panel{
+	background-color: #F5F5F5;
+	width: 100%;
+}
+
+
+footer{
+	font-size: 70%;
+	margin-top: 10%;
+	width: 100%;
+	float: left;
+	background-color: #F5F5F5;
+}
+footer ul{
+	list-style:none;
+}
+footer a{
+	display:block;
+	text-decoration:none;
+	color:#2069D0;
+}
+footer a:hover{
+	color:#66cc33;
+}
+
+@media (max-width: 1200px){
+	aside.standings{
+		width: 90%;
+	}
+	aside.standings div{
+		float: left;
+	}
+	aside.standings h3{
+		float: left;
+		clear: both;
+	}
+
+	aside.stats{
+		width: 90%;
+	}
+	aside.stats div{
+		float: left;
+	}
+	div.news{
+		width: 90%;
+	}
+}
+.hide{display: none;}
+
+
+
+
+/* Division Block */
+.wdgT
+{
+    width:170px;
+    margin-bottom:5px;
+}
+
+/* Column Headers */
+.wdgH td
+{
+    font-size:10px;
+    font-weight:bold;
+    text-align:center;
+    width:23px;
+    border-bottom:1px solid black;
+}
+
+/* Win, Loss and GB columns */
+.wdg1 td,
+.wdg2 td
+{
+     width:23px;
+     font-size:10px;
+     text-align:center;
+}
+/*Attempt to remove link blue color*/
+.wdg1 a,
+.wdg2 a{
+	text-decoration:none;
+	color:#2069D0;
+}
+
+/* Team Name Column */
+.wdg1 .wdg1_l,
+.wdg2 .wdg2_l
+{
+    font-size:12px;
+    width:101px;
+    text-align:left;
+
+}
+
+/* Divison Name Headers */
+.wdgH .wdgH_l 
+{
+    width:101px;
+    text-align:left;
+}  
+
