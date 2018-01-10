@@ -11,14 +11,14 @@ header h1{
 header img{
 	width: 85%;
 	float: left;
-	margin: 0% 0% 1% 5%;
+	margin-left: 5%;
 }
 
 nav{
 	float:left;
 	width: 85%;
 	clear:both;
-	margin:0% 0% 0% 5%;
+	margin:0% 0% 2% 5%;
 	font-size: 125%;
 	list-style:none;
 }
@@ -72,7 +72,7 @@ aside.standings{
 	background-color: #F5F5F5;
 }
 aside.standings h2{
-	margin-left: .5em;
+	margin-left: 1em;
 }
 aside.standings h3{
 	font-size: 90%;
@@ -92,7 +92,7 @@ aside.stats{
 	background-color: #F5F5F5;
 }
 aside.stats h2{
-	margin-left: .5em;
+	margin-left: 1em;
 }
 aside.stats h3{
 	font-size: 90%;
