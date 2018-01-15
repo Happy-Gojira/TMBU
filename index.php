@@ -45,6 +45,7 @@
       </div>
       
     </header>
+    <!---
     <aside class="standings">
       <h2>Standings</h2>
       <h3>HL</h3>
@@ -154,6 +155,16 @@
         </div>
       </div>    
     </aside>
+  -->
+  <aside class="standings">
+    <h2>2089 Draft</h2>
+      <div>
+        <?php 
+          $html = getHTML('http://tmbu.sportsrealm.net/statslab/widget.php?show=draftList&league_id=100&lastX=26&nextX=10', 10);
+          echo $html;
+        ?>
+      </div>
+  </aside>
     <div class="news">
       <h2>Breaking News</h2>
       <div class="articles">
