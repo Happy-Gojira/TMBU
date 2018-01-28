@@ -1,20 +1,20 @@
 <html>
-<head>   
-  <meta charset="windows-1252"> 
+<head>
+  <meta charset="windows-1252">
   <title>TMBU</title>
   <link rel="stylesheet" href="css/carousel.css">
   <!--<link rel="stylesheet" media="screen" href="http://openfontlibrary.org/face/overpass" rel="stylesheet" type="text/css"/> -->
-  
+
   <link href='http://fonts.googleapis.com/css?family=PT+Serif|Playfair+Display&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  
- 
-  
+
+
+
 
 
 </head>
 <body>
-<?php 
+<?php
   function getHTML($url,$timeout)
   {
        $ch = curl_init($url); // initialize curl with given url
@@ -43,45 +43,44 @@
       <div>
         <a href="#"><img src="img/1_tmbu_site_banner.jpg" alt="TMBU Logo"></a>
       </div>
-      
+
     </header>
-    <!---
     <aside class="standings">
       <h2>Standings</h2>
       <h3>HL</h3>
       <div>
-        <?php 
+        <?php
           $html = getHTML('http://tmbu.sportsrealm.net/statslab/widget.php?show=standings&division=2&sub_league=1', 10);
           echo $html;
         ?>
       </div>
       <div>
-        <?php 
+        <?php
           $html = getHTML('http://tmbu.sportsrealm.net/statslab/widget.php?show=standings&division=1&sub_league=1', 10);
           echo $html;
         ?>
       </div>
       <div>
-        <?php 
+        <?php
           $html = getHTML('http://tmbu.sportsrealm.net/statslab/widget.php?show=standings&division=0&sub_league=1', 10);
           echo $html;
         ?>
       </div>
       <h3>SL</h3>
       <div>
-        <?php 
+        <?php
           $html = getHTML('http://tmbu.sportsrealm.net/statslab/widget.php?show=standings&division=2&sub_league=0', 10);
           echo $html;
         ?>
       </div>
       <div>
-        <?php 
+        <?php
           $html = getHTML('http://tmbu.sportsrealm.net/statslab/widget.php?show=standings&division=1&sub_league=0', 10);
           echo $html;
         ?>
       </div>
       <div>
-        <?php 
+        <?php
           $html = getHTML('http://tmbu.sportsrealm.net/statslab/widget.php?show=standings&division=0&sub_league=0', 10);
           echo $html;
         ?>
@@ -89,7 +88,7 @@
     </aside>
     <aside class="stats">
       <h2>League Leaders</h2>
-      
+
       <div class="single">
         <div class='panel' >
           <h3>SL Player of the Week</h3>
@@ -103,7 +102,7 @@
               $html = getHTML('http://tmbu.sportsrealm.net/statslab/widget.php?show=potw&league_id=100&sub_league=1', 10);
               $html = utf8_encode($html);
               echo $html;
-            ?>    
+            ?>
         </div>
         <div class='panel'>
           <h3>WAR leaders</h3>
@@ -111,14 +110,14 @@
               $html = getHTML('http://tmbu.sportsrealm.net/statslab//widget.php?stat=war&topX=10', 10);
               $html = utf8_encode($html);
               echo $html;
-              
+
             ?>
             <h3>pWAR leaders</h3>
             <?php
               $html = getHTML('http://tmbu.sportsrealm.net/statslab//widget.php?stat=pwar&topX=10', 10);
               $html = utf8_encode($html);
               echo $html;
-              
+
             ?>
         </div>
         <div class='panel'>
@@ -127,14 +126,14 @@
             $html = getHTML('http://tmbu.sportsrealm.net/statslab//widget.php?stat=hr&topX=10', 10);
             $html = utf8_encode($html);
             echo $html;
-            
+
           ?>
           <h3>Hit leaders</h3>
           <?php
             $html = getHTML('http://tmbu.sportsrealm.net/statslab//widget.php?stat=h&topX=10', 10);
             $html = utf8_encode($html);
             echo $html;
-            
+
           ?>
         </div>
         <div class='panel'>
@@ -143,34 +142,36 @@
             $html = getHTML('http://tmbu.sportsrealm.net/statslab//widget.php?stat=pk&topX=10', 10);
             $html = utf8_encode($html);
             echo $html;
-            
+
           ?>
           <h3>QS leaders</h3>
           <?php
             $html = getHTML('http://tmbu.sportsrealm.net/statslab//widget.php?stat=qs&topX=10', 10);
             $html = utf8_encode($html);
             echo $html;
-            
+
           ?>
         </div>
-      </div>    
+      </div>
     </aside>
-  -->
+<!--
+This is for the draft
   <aside class="standings">
     <h2>2089 Draft</h2>
       <div>
-        <?php 
+        <?php
           $html = getHTML('http://tmbu.sportsrealm.net/statslab/widget.php?show=draftList&league_id=100&lastX=26&nextX=10', 10);
           echo $html;
         ?>
       </div>
   </aside>
+-->
     <div class="news">
       <h2>Breaking News</h2>
       <div class="articles">
-      <?php 
+      <?php
         include('simple_html_dom.php');
-        //set up curl 
+        //set up curl
         $ch = curl_init("http://tmbu.sportsrealm.net/lgreports//leagues/league_100_home.html");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
@@ -187,7 +188,7 @@
         //reformat links
         $urlAdd = "http://tmbu.sportsrealm.net/lgreports/";
         $stringToRemove = "..";
-        $re = "/(\.){2}/"; 
+        $re = "/(\.){2}/";
         $articles = preg_replace($re, $urlAdd, $articles);
 
 
@@ -195,20 +196,20 @@
         echo $articles[1];
         echo $articles[2];
        ?>
-      
-        
+
+
       </div>
-      
+
     </div>
-    
+
     <footer>
       <ul>
         <li>&copy; TMBU 2018</li>
         <li><a href="http://www.ootpdevelopments.com/board">OOTP Boards</a></li>
-        <li>OOTP 16</li>
+        <li>OOTP 18</li>
       </ul>
     </footer>
-    
+
   </div>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -217,18 +218,18 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.single').slick({
-      
+
         infinite: true,
         adaptiveHeight: true,
         arrows: true,
         dots: true,
         autoplay:true,
         autoplaySpeed: 8000,
-        
+
         slidesToShow: 1,
         slidesToScroll: 1
-        
-        
+
+
       });
     });
   </script>
@@ -237,8 +238,3 @@
 </body>
 
 </html>
-
-
-
-
-
